@@ -19,7 +19,7 @@ ZIP_URL = "https://fetchquick.com/"
 chrome_options = Options()
 #chrome_options.add_argument("--headless")
 chrome_options.add_argument("--window-size=1366x768")
-driver = webdriver.Chrome(executable_path="/Users/ershad/desktop/python/chromedriver", chrome_options=chrome_options)
+driver = webdriver.Chrome(executable_path="/home/ubuntu/mw_scrape/chromedriver", chrome_options=chrome_options)
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
