@@ -10,16 +10,21 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
+from pyvirtualdisplay import Display
 
 ZIP = "10017"
 input = "eggs"
 
 ZIP_URL = "https://fetchquick.com/"
 
-chrome_options = Options()
+#chrome_options = Options()
 #chrome_options.add_argument("--headless")
-chrome_options.add_argument("--window-size=1366x768")
-driver = webdriver.Chrome(executable_path="/home/ubuntu/mw_scrape/chromedriver", chrome_options=chrome_options)
+#chrome_options.add_argument("--window-size=1366x768")
+#driver = webdriver.Chrome(executable_path="/home/ubuntu/mw_scrape/chromedriver", chrome_options=chrome_options)
+
+display = Display(visible=0, size=(800, 600))
+display.start()
+driver = webdriver.Chrome()
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
